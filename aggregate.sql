@@ -36,7 +36,8 @@ SELECT customer_id,
 	MIN(profit) AS min_profit,
 	MAX(profit) AS max_profit,
 	AVG(profit) AS avg_profit,
-	SUM(profit) AS total_profit
+	SUM(profit) AS total_profits
 FROM sales
 GROUP BY customer_id
+HAVING SUM(profit) > 1000
 ORDER BY total_profit;
