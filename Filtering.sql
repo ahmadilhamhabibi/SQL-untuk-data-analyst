@@ -8,22 +8,30 @@ WHERE age = 25;
 
 SELECT customer_name, age, city, region
 FROM customer
-WHERE age != 25
-LIMIT 5;
+WHERE city = 'Miami';
 
 
 SELECT customer_name, age, city, region
 FROM customer
-WHERE age > 60
-ORDER BY age 
-LIMIT 5;
+WHERE region != 'West'
+LIMIT 10;
 
+
+SELECT customer_name, age, city, region
+FROM customer
+WHERE age > 50
+LIMIT 10;
+
+
+SELECT customer_id, ship_date, profit
+FROM sales
+WHERE ship_date < '2016-11-11'
+LIMIT 10;
 
 SELECT customer_name, age, city, region
 FROM customer
 WHERE age <= 20
-ORDER BY age DESC
-LIMIT 5;
+LIMIT 10;
 
 
 -- Operator Logical (AND, OR, NOT)
@@ -31,6 +39,10 @@ LIMIT 5;
 SELECT customer_name, age, city, region
 FROM customer
 WHERE age = 25 AND region = 'West';
+
+SELECT customer_name, age, city, region
+FROM customer
+WHERE age = 25 OR region = 'West';
 
 
 SELECT customer_name, age, city, region
