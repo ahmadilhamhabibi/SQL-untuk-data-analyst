@@ -60,16 +60,37 @@ ORDER BY age DESC;
 
 SELECT customer_name, age, city, region
 FROM customer
-WHERE age BETWEEN 26 AND 28;
+WHERE age BETWEEN 20 AND 30;
 
 
 SELECT customer_name, age, city, region
 FROM customer
-WHERE age >= 26 AND age <= 28;
+WHERE age >= 20 AND age <= 30;
 
 -- IN
 
 SELECT customer_name, age, city, region
 FROM customer
 WHERE city IN ('Milwaukee', 'San Antonio', 'Las Vegas');
+
+-- LIKE
+
+SELECT customer_name, age, city, region
+FROM customer
+WHERE customer_name LIKE 'V%' 
+
+
+SELECT customer_name, age, city, region
+FROM customer
+WHERE customer_name LIKE '%m'
+
+
+SELECT customer_name, age, city, region
+FROM customer
+WHERE city LIKE '%land%'
+
+
+SELECT customer_name, age, city, region
+FROM customer
+WHERE customer_name LIKE '_h%'
 
