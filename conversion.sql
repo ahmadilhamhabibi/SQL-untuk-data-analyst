@@ -10,13 +10,14 @@ FROM sales;
 SELECT order_date, TO_CHAR(order_date, 'MM-DD-YY') AS TEXT_DATE
 FROM sales;
 
-SELECT order_date, TO_CHAR(order_date, 'Month DD, YYYY') AS long_text_date_format
+
+SELECT order_date, TO_CHAR(order_date, 'Month DD, YYYY') AS text_date_format
 FROM sales;
+
 
 -- Conversion to date
 SELECT TO_DATE('2014/04/14','YYYY/MM/DD');
 
--- SELECT TO_DATE('033114', 'MM-DD-YY');
 
 
 -- Conversion to number
