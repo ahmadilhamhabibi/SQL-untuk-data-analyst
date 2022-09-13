@@ -6,10 +6,7 @@ WHERE customer_id IN (SELECT DISTINCT customer_id FROM customer WHERE age > 60);
 
 -- Subquery in FROM
 SELECT
-	a.product_id,
-	a.product_name,
-	a.category,
-	b.quantity
+	a.product_id, a.product_name, a.category, b.quantity
 FROM product AS a
 LEFT JOIN (SELECT product_id,
 		  			SUM(quantity) AS quantity
