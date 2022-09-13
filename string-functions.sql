@@ -31,3 +31,7 @@ SELECT
 	city||', '||state||', '||country AS address
 FROM customer
 WHERE customer_name LIKE 'Ad%';
+
+--TRIM
+SELECT TRIM('   Ahmad     Ilham    Habibi    ');
+
