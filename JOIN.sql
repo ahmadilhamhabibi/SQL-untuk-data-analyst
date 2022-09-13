@@ -5,7 +5,7 @@ CREATE TABLE sample_sales AS
 	SELECT * FROM sales
 	WHERE order_date BETWEEN '2017-01-01' AND '2017-01-31';
 
-SELECT DISTINCT(customer_id) FROM sample_sales
+SELECT customer_id FROM sample_sales
 ORDER BY customer_id;
 	
 -- Membuat tabel sample_customer dengan data usia 20-30 tahun
@@ -13,7 +13,7 @@ CREATE TABLE sample_customer AS
 	SELECT * FROM customer
 	WHERE age BETWEEN 20 AND 30;
 	
-SELECT DISTINCT(customer_id) FROM sample_customer
+SELECT customer_id FROM sample_customer
 ORDER BY customer_id;
 	
 -- INNER JOIN
