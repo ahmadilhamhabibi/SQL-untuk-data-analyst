@@ -1,7 +1,6 @@
 -- Numerik Functions
 
 -- CEIL, FLOOR, and Round
-
 SELECT 
 	Sales,
 	CEIL(sales) AS ceiling,
@@ -14,7 +13,7 @@ FROM sales;
 SELECT POWER(6,2);
 
 SELECT
-	age,
-	POWER(age,2)
+	DISTINCT(age),
+	(POWER(age,2))
 FROM customer
 ORDER BY age;
